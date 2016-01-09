@@ -15,8 +15,7 @@ test:
   override:
     - cabal build
   post:
-    - git submodule init
-    - git submodule update
+    - git submodule update --init
     - cd _site/ && git checkout gh-pages
     - cabal run build
 
